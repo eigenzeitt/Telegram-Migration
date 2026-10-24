@@ -91,7 +91,7 @@ try:
 except ImportError:
     pass
 
-API_ID = int(os.environ.get("TELEGRAM_API_ID", "39505168"))
+API_ID = int(os.environ.get("TELEGRAM_API_ID", "39505167"))
 
 
 def _load_secret(name):
