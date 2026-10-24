@@ -66,7 +66,7 @@ The API ID default in the script is `39505167`, for this version; you can overri
 You can use Colab Secrets named `TELEGRAM_API_HASH`, `TELEGRAM_BOT_TOKEN`, and `TELEGRAM_CHANNEL_PEER`; enable notebook access for each. Set `TELEGRAM_EXPORT_DIR` to the actual Drive path, for example:
 
 ```text
-/content/drive/MyDrive/ChatExport_2025-03-21
+/content/drive/MyDrive/ChatExport_2025-01-01
 ```
 
 The script mounts Google Drive automatically when the configured export directory is under `/content/drive/` and Drive is not mounted yet. You can run the `.py` file directly; no separate `await main()` cell is required.
