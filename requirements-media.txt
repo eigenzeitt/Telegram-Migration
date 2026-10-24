@@ -1,0 +1,3 @@
+# Optional helper used only if a .webm video sticker needs probing and the
+# host does not already have working ffmpeg/ffprobe binaries.
+static-ffmpeg

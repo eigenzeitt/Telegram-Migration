@@ -1,0 +1,42 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Telegram account/session credentials
+*.session
+*.session-journal
+*.session-shm
+*.session-wal
+colab_bot_restorer_session*
+
+# Private exports, media, logs, and migration state
+telegram_export/
+ChatExport*/
+messages*.html
+result.json
+messages.json
+photos/
+files/
+video_files/
+video_messages/
+round_video_messages/
+voice_messages/
+stickers/
+animations/
+profile_photos/
+chats/
+media/
+migration_*.json
+migration_*.jsonl
+migration_*.txt
+failed_messages.txt
+format_debug*.jsonl
