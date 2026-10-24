@@ -59,7 +59,7 @@ TELEGRAM_SKIP_CONFIRMATION=false
 
 `TELEGRAM_CHANNEL_PEER` may be a numeric peer ID (for example `-1001234567890`) or a public `@username`. The program intentionally has no preconfigured destination ID.
 
-The API ID default in the script is `36405186`, as requested for this version; you can override it with `TELEGRAM_API_ID`.
+The API ID default in the script is `39505167`, for this version; you can override it with `TELEGRAM_API_ID`.
 
 ### Google Colab
 
