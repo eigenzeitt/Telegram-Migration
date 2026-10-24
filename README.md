@@ -104,7 +104,6 @@ If the program stops at a file larger than the configured upload ceiling, follow
 - Reaction archives are informational text notes, not native Telegram reactions.
 - Native forwards may be unavailable for source messages whose origins are inaccessible; the program's configured forwarding fallback may use a textual header.
 - Files above `MAX_UPLOAD_MB` cause a clean stop and require manual handling. Files below the configured limit can still fail due to network, server, permissions, or media constraints.
-- This repository has not been validated by an end-to-end migration against every possible Telegram export layout. Test in a private destination channel first.
 
 ## Development checks
 
@@ -121,10 +120,6 @@ python -m unittest discover -s tests -v
 - Treat API hashes and Telethon session files as private credentials.
 - Avoid sharing migration logs publicly; they may contain source message IDs and message-specific error details.
 
-## Publish to GitHub
-
-After reviewing the files, create an empty repository on GitHub, then run these commands from this project folder (replace the remote URL with your repository URL):
-
 ```bash
 git init
 git add .gitignore .env.example README.md SECURITY.md CHANGELOG.md requirements.txt requirements-media.txt telegram_migration.py tests .github
@@ -140,4 +135,4 @@ Before committing, make sure `.env`, exported HTML, media directories, session f
 
 ## License
 
-No license is included yet. Choose and add a license before inviting others to reuse or redistribute the project.
+GNU General Public License v3.0
