@@ -1,8 +1,8 @@
 # Telegram Desktop Chat-History Migration (v8.2)
 
-A Python tool for reconstructing a Telegram conversation in a destination channel from a **Telegram Desktop export** (`messages.html`, `messages2.html`, etc.) and the media files that accompany it.
+A Python tool for reconstructing a Telegram conversation in a destination channel from a **Telegram Desktop export** (`messages.html`, `messages2.html`, etc.) and the media files that accompany it. 
 
-> **Scope:** this program migrates a local export. It does not sign into Telegram Web or retrieve the complete live history of an unrelated channel. Most reconstructed messages are newly sent by your destination bot; the program cannot recreate arbitrary historical sender identities or original native reaction totals.
+> **Scope:** this program migrates a local export. It does not sign into Telegram Web or retrieve the complete live history of an unrelated channel. Most reconstructed messages are newly sent by your destination bot; the program cannot recreate arbitrary historical sender identities or original native reaction totals. This program uses Telegram's official Bot API/MTProto bot authentication to send migrated messages, rather than logging in through your personal Telegram account. It does not require your personal phone number, SMS login code, or personal account session, reducing the exposure of your personal account credentials. The bot operates under its own identity, so sending limits and restrictions primarily affect the bot.
 
 ## Features
 
