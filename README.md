@@ -48,7 +48,7 @@ python -m pip install -r requirements.txt
 Example `.env`:
 
 ```dotenv
-TELEGRAM_API_ID=36405186
+TELEGRAM_API_ID=39505167
 TELEGRAM_API_HASH=replace_with_your_api_hash
 TELEGRAM_BOT_TOKEN=replace_with_your_new_bot_token
 TELEGRAM_CHANNEL_PEER=-1001234567890
