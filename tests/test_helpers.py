@@ -202,7 +202,12 @@ class MediaTests(unittest.TestCase):
             )
             with patch.object(migration, "BASE_DIR", temp):
                 media = migration.find_media(elem)
-            self.assertEqual(media, [(str(photo), "photo")])
+            self.assertEqual(len(media), 1)
+            self.assertEqual(
+                os.path.normcase(os.path.normpath(media[0][0])),
+                os.path.normcase(os.path.normpath(str(photo))),
+            )
+            self.assertEqual(media[0][1], "photo")
 
     def test_album_compatibility_only_allows_supported_media_groups(self):
         self.assertTrue(migration._album_compatible([("a", "photo"), ("b", "video")]))
