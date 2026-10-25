@@ -2622,7 +2622,5 @@ def _run_main():
     return loop.run_until_complete(main())
 
 
-# Executing the .py file in Colab/Jupyter automatically starts the migration.
-# No second notebook cell containing `await main()` is required.
-if __name__ == "__main__" or "ipykernel" in sys.modules or "google.colab" in sys.modules:
+if __name__ == "__main__":
     _run_main()
