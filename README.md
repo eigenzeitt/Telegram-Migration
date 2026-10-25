@@ -107,11 +107,20 @@ If the program stops at a file larger than the configured upload ceiling, follow
 
 ## Development checks
 
-Run the focused tests:
+The repository includes an offline regression suite. The tests do not sign in to Telegram, contact Telegram servers, send messages, or require API credentials.
+
+Run the tests from the repository root:
 
 ```bash
+python -m pip install -r requirements.txt
+python -m py_compile telegram_migration.py
 python -m unittest discover -s tests -v
 ```
+
+The suite covers rich-text parsing and UTF-16 entity offsets, long-text chunking, export parsing, dates and replies, media classification, GIF/sticker upload options, upload-size checks, progress and ID-map persistence, manual-upload records, reaction metadata normalization/import, and mocked send/resume paths. Send-related tests use fake clients, so they cannot accidentally post to a real Telegram chat.
+
+GitHub Actions runs the compile check and test suite on Python 3.10, 3.11, and 3.12 on Ubuntu and Windows. Passing unit tests are useful regression evidence, not a guarantee that every export or live Telegram upload will succeed. Always dry-run and test a small archive before a full migration.
+
 
 ## Security
 
