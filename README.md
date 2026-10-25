@@ -69,7 +69,7 @@ You can use Colab Secrets named `TELEGRAM_API_HASH`, `TELEGRAM_BOT_TOKEN`, and `
 /content/drive/MyDrive/ChatExport_2025-01-01
 ```
 
-The script mounts Google Drive automatically when the configured export directory is under `/content/drive/` and Drive is not mounted yet. You can run the `.py` file directly; no separate `await main()` cell is required.
+The script mounts Google Drive automatically when the configured export directory is under `/content/drive/` and Drive is not mounted yet. %run telegram_migration.py
 
 ## Run safely
 
