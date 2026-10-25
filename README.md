@@ -126,19 +126,6 @@ The suite covers rich-text parsing and UTF-16 entity offsets, long-text chunking
 - Treat API hashes and Telethon session files as private credentials.
 - Avoid sharing migration logs publicly; they may contain source message IDs and message-specific error details.
 
-```bash
-git init
-git add .gitignore .env.example README.md SECURITY.md CHANGELOG.md requirements.txt requirements-media.txt telegram_migration.py tests .github
-git status --short
-git diff --cached --stat
-git commit -m "Prepare Telegram migration v8.2 repository"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-git push -u origin main
-```
-
-Before committing, make sure `.env`, exported HTML, media directories, session files, and migration state are not staged. `.gitignore` excludes the usual locations and sensitive file types, but always inspect `git status` before pushing.
-
 ## License
 
 GNU General Public License v3.0
