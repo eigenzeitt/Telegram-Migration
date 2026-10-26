@@ -74,6 +74,7 @@ The script mounts Google Drive automatically when the configured export director
 Run it from a Colab code cell, inside the repository folder:
 
 ```python
+%env TELEGRAM_EXPORT_DIR=/content/drive/MyDrive/ChatExport_2025-01-01
 %run telegram_migration.py
 ```
 
